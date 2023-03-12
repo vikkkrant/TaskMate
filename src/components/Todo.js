@@ -27,8 +27,9 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
       key={index}
     >
       <div key={todo.id} onClick={() => completeTodo(todo.id)}>
-        {todo.text}<br/>
-        Scheduled at : {todo.time}
+        <span>{todo.text}</span><br/>
+        Description : {todo.description}<br/>
+        Scheduled Today at : {todo.time}
       </div>
       <div className='icons'>
         <RiCloseCircleLine

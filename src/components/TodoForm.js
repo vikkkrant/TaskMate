@@ -1,16 +1,13 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState} from 'react';
 import AccessTimeTwoToneIcon from '@mui/icons-material/AccessTimeTwoTone';
 
 function TodoForm(props) {
   const [input, setInput] = useState(props.edit ? props.edit.value : '');
 
-  const inputRef = useRef(null);
+  
 
   const [time,setTime] = useState();
-
-  useEffect(() => {
-    inputRef.current.focus();
-  });
+  const [description,setDescription] = useState('');
 
   const handleChange = e => {
     setInput(e.target.value);
@@ -20,16 +17,22 @@ function TodoForm(props) {
     setTime(e.target.value);
   }
 
+  const handleDescription = (e)=>{
+    setDescription(e.target.value)
+  }
+
   const handleSubmit = e => {
     e.preventDefault();
 
     props.onSubmit({
       id: Math.floor(Math.random() * 10000),
       text: input,
-      time: time
+      time: time,
+      description: description
     });
     setInput('');
     setTime('');
+    setDescription('');
   };
 
   return (
@@ -41,13 +44,24 @@ function TodoForm(props) {
             value={input}
             onChange={handleChange}
             name='text'
-            ref={inputRef}
+           
             className='todo-input edit'
             required
             autoComplete='off'
 
           />
           <br />
+          <input
+            type="text"
+            placeholder='Update Task Description'
+            value={description}
+            onChange={handleDescription}
+            name='description'
+            className='todo-input edit'
+            required
+            autoComplete='off'
+
+          />
 
           <input
             type='time'
@@ -58,7 +72,10 @@ function TodoForm(props) {
             className='todo-input edit'
             required
             autoComplete='off'
-        /><br/><br/>
+        /><br/>
+        <br/>
+
+
           <button onClick={handleSubmit} className='todo-button edit'>
             Update
           </button>
@@ -71,13 +88,24 @@ function TodoForm(props) {
             onChange={handleChange}
             name='text'
             className='todo-input'
-            ref={inputRef}
+           
             required
             autoComplete='off'
 
             
           />
           <br/>
+          <input
+            type='text'
+            placeholder='Enter Task Description'
+            value={description}
+            onChange={handleDescription}
+            name='description'
+            className='todo-input'
+            required
+            autoComplete='off'
+
+          />
           <input
             type='time'
             value={time}

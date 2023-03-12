@@ -93,7 +93,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   );
   color: #fff;
   text-transform: capitalize;
-  size-adjust: 10px;
+  width: max-content;
+  font-size: medium;
+  text-align: center;
 }
 
 .todo-input.edit {
@@ -118,7 +120,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 .todo-row {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
+  text-align: left;
   margin: 4px auto;
   color: #fff;
   background: linear-gradient(
@@ -130,30 +133,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
   padding: 16px;
   border-radius: 5px;
   width: 90%;
-}
-
-.todo-row:nth-child(4n + 1) {
-  background: linear-gradient(
-    90deg,
-    rgba(93, 12, 255, 1) 0%,
-    rgba(155, 0, 250, 1) 100%
-  );
-}
-
-.todo-row:nth-child(4n + 2) {
-  background: linear-gradient(
-    90deg,
-    rgb(178, 12, 255) 0%,
-    rgb(250, 0, 135, 1) 100%
-  );
-}
-
-.todo-row:nth-child(4n + 3) {
-  background: linear-gradient(
-    90deg,
-    rgb(118, 20, 255) 0%,
-    rgba(17, 122, 255, 1) 100%
-  );
+  margin-bottom: 20px;
 }
 
 .icons {
@@ -170,4 +150,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 .edit-icon {
   color: #fff;
+}
+
+span{
+  font-size: xx-large;
 }
