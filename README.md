@@ -1,3 +1,15 @@
+This is a Todo List application that allows users to add, edit, and delete tasks with ease. Users
+can set priorities and deadlines for tasks to help manage their time efficiently.
+
+This Project includes : 
+- Appealing UI,UX
+- A responsive website design that is intuitive and easy to navigate.
+- Users is able to add new tasks with a simple form that includes fields for task
+  description, deadline.
+- The user can edit and delete existing tasks.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
