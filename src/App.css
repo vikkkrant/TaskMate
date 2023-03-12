@@ -6,21 +6,71 @@
     'Lucida Sans', Arial, sans-serif;
 }
 
+/* Responsive layout for small screens */
+@media screen and (max-width: 600px) {
+  .todo-app {
+    width: 90%;
+    margin: 64px auto;
+  }
+  
+  .todo-input {
+    width: 100%;
+  }
+  
+  .todo-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+/* Responsive layout for medium screens */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .todo-app {
+    width: 80%;
+    margin: 96px auto;
+  }
+  
+  .todo-input {
+    width: 70%;
+  }
+  
+  .todo-button {
+    width: 25%;
+    margin-top: 0px;
+  }
+}
+
+/* Responsive layout for large screens */
+@media screen and (min-width: 901px) {
+  .todo-app {
+    width: 520px;
+    margin: 128px auto;
+  }
+  
+  .todo-input {
+    width: 320px;
+  }
+  
+  .todo-button {
+    width: max-content;
+    margin-top: 0px;
+  }
+}
+
 .dark {
   background-color: #333;
   color: #fff;
-  }
-  .light {
+}
+
+.light {
   background-color: #fff;
   color: #333;
-  }
-
+}
 
 body {
-   background-image: linear-gradient(to bottom right, rgb(131, 46, 250),#9a0cff);
-
-  
+  background-image: linear-gradient(to bottom right, rgb(131, 46, 250), #9a0cff);
 }
+
 .icon:hover {
   transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
@@ -29,10 +79,8 @@ body {
   display: flex;
   flex-direction: column;
   /* justify-content: start; */
-  width: 520px;
   background: #ffffff;
   text-align: center;
-  margin: 128px auto;
   border-color: #9a0cff;
   border-radius: 10px;
 }
@@ -63,16 +111,13 @@ h3 {
   border-radius: 4px 0 0 4px;
   border: 2px solid #9a0cff;
   outline: none;
-  width: 320px;
   background: transparent;
   color: #9a0cff;
   margin-bottom: 10px;
 }
 
-input[type="time"]::-webkit-calendar-picker-indicator {
-
+input[type='time']::-webkit-calendar-picker-indicator {
   background: url(https://mywildalberta.ca/images/GFX-MWA-Parks-Reservations.png) no-repeat;
-
 }
 
 .todo-input::placeholder {
