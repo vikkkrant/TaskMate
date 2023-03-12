@@ -39,6 +39,8 @@ function TodoList() {
       }
       return todo;
     });
+    updatedTodos.sort((a,b)=>(parseInt(a.time.replace(":","")) > parseInt( b.time.replace(":",""))) ? 1: -1)
+    console.log(updatedTodos)
     setTodos(updatedTodos);
   };
   const [theme, setTheme] = useState('light');
