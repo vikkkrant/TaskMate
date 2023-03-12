@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import TodoForm from './TodoForm';
 import Todo from './Todo';
 import RocketLaunchTwoToneIcon from '@mui/icons-material/RocketLaunchTwoTone';
+import NightsStayIcon from '@mui/icons-material/NightsStay';
 
 function TodoList() {
   const [todos, setTodos] = useState([]);
@@ -40,9 +41,31 @@ function TodoList() {
     });
     setTodos(updatedTodos);
   };
+  const [theme, setTheme] = useState('light');
+  const toggleTheme = () => {
+    if (theme === 'light') {
+    setTheme('dark');
+    }
+    else {setTheme('light');
+  }
+}
+useEffect(() => {
+  document.body.className = theme;
+  }, [theme]);
+
+const styleForPaper = {
+  width: '40px',
+  height: '40px',
+  alignItems:'right',
+  color:'#9a0cff'
+};
+
 
   return (
-    <>
+    
+    <div className={`App ${theme}`}>
+    <br />
+    <NightsStayIcon className='icon' onClick={toggleTheme} style={styleForPaper}/>
       <h1>TaskMate <RocketLaunchTwoToneIcon/></h1>
       <h3>What's the Plan for Today?</h3>
       <br />
@@ -53,7 +76,7 @@ function TodoList() {
         removeTodo={removeTodo}
         updateTodo={updateTodo}
       />
-    </>
+      </div>
   );
 }
 

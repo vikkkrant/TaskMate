@@ -6,23 +6,35 @@
     'Lucida Sans', Arial, sans-serif;
 }
 
+.dark {
+  background-color: #333;
+  color: #fff;
+  }
+  .light {
+  background-color: #fff;
+  color: #333;
+  }
+
+
 body {
    background-image: linear-gradient(to bottom right, rgb(131, 46, 250),#9a0cff);
 
   
 }
+.icon:hover {
+  transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
 .todo-app {
   display: flex;
   flex-direction: column;
   /* justify-content: start; */
   width: 520px;
-  min-height: 600px;
   background: #ffffff;
   text-align: center;
   margin: 128px auto;
-  border-radius: 10px;
-  padding-bottom: 32px;
   border-color: #9a0cff;
+  border-radius: 10px;
 }
 
 h1 {
