@@ -9,6 +9,7 @@ This Project includes :
 - Users is able to add new tasks with a simple form that includes fields for task
   description, deadline.
 - The user can edit and delete existing tasks.
+- Tasks are sorted according to their deadline
 
 
 
