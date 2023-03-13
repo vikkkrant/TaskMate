@@ -1,4 +1,4 @@
-# Link - https://clever-sunflower-109196.netlify.app/
+# Link - https://deluxe-frangollo-ce736e.netlify.app/
 
 This is a Todo List application that allows users to add, edit, and delete tasks with ease. Users
 can set priorities and deadlines for tasks to help manage their time efficiently.
@@ -9,6 +9,7 @@ This Project includes :
 - Users is able to add new tasks with a simple form that includes fields for task
   description, deadline.
 - The user can edit and delete existing tasks.
+- Tasks are sorted according to their deadline
 
 
 
