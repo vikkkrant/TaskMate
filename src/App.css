@@ -6,7 +6,7 @@
     'Lucida Sans', Arial, sans-serif;
 }
 
-/* Responsive layout for small screens */
+
 @media screen and (max-width: 600px) {
   .todo-app {
     width: 90%;
@@ -23,7 +23,7 @@
   }
 }
 
-/* Responsive layout for medium screens */
+
 @media screen and (min-width: 601px) and (max-width: 900px) {
   .todo-app {
     width: 80%;
@@ -40,7 +40,7 @@
   }
 }
 
-/* Responsive layout for large screens */
+
 @media screen and (min-width: 901px) {
   .todo-app {
     width: 520px;
